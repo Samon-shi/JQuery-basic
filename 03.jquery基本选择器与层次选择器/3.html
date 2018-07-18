@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择器的种类</title>
+		<script src="../jquery-1.8.3.js"></script>
+	<style type="text/css">
+		/*#p1{color: red;}*/
+	</style>
+	
+	<script>
+		$(function(){
+			$('body *').css('border','10px solid green');
+			$("#p1").css('color','green');
+			$(".p2").css('color','red');
+			$('p,div').css('color','blue');  //p 跟div 标签 字体颜色都是蓝色 
+			
+		})
+	</script>
+	</head>
+	<body>
+		<p>dfsfdsdds</p>
+		<p id="p1">sdsadsa</p>
+		<p class="p2">sdsadsadsadsadsa</p>
+		<span>sdsadsa</span>
+		<div>!weqw</div>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原生js表格隔行换色</title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			#table{
+				width: 500px;
+				border: 1px solid red;
+				border-collapse:collapse ;
+			}
+			
+			#table td{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="table" border="" cellspacing="" cellpadding="">
+			<tr>
+				<th>11</th>
+				<th>22</th>
+				<th>33</th>
+				<th>4</th>
+			</tr>
+			
+			<tr>
+				<th>11</th>
+				<th>22</th>
+				<th>33</th>
+				<th>4</th>
+			</tr>
+			
+			<tr>
+				<th>11</th>
+				<th>22</th>
+				<th>33</th>
+				<th>4</th>
+			</tr>
+			
+			<tr>
+				<th>11</th>
+				<th>22</th>
+				<th>33</th>
+				<th>4</th>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var oTable =document.getElementById('table');
+			
+			var aTr =oTable.getElementsByTagName('tr');
+			
+//			alert(aTr.length);
+
+			for(var i=0;i<aTr.length;i++){
+//				aTr[i].style.background="yellow"; //每行都成红色 
+				if(i%2==1){
+					aTr[i].style.background="yellow";
+				}else{
+					aTr[i].style.background="red";
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

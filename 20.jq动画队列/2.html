@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			div{
+				width: 50px;
+				height: 50px;
+				background: #f60;
+				position: absolute;
+				left: 10px;
+				top: 40px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<button>Run</button>
+		<input type="button" name=""  id="stop" value="stop" />
+		<input type="button" name="" id="dequeue" value="dequeue"  />
+		<input type="button" name="" id="finish" value="finish"  />
+		<div></div>
+		
+		<script>
+			$('button').click(function(){
+				$('div').animate({
+					'top':'400px'
+				},2000).animate({
+					'left':'800px'
+				},2000).animate({
+					'top':'40px'
+				},2000).animate({
+					'left':'10px'
+				},2000);
+			});
+			
+			$('#stop').click(function(){
+		
+//				$('div').stop(false,false);   //直接跳过top：400
+//				$('div').stop(true,false);  //停止了  清除动画队列 
+//				$('div').stop(false,true);  //直接跳到当前动画最后结果
+				$('div').stop(true,true);  //直接跳到当前动画最后结果，并清除队列
+			});
+			
+			
+			$('#dequeue').click(function(){
+				$('div').dequeue();  //跳出下一个动画，然后接着执行后面的动画
+			});
+			
+			$('#finish').click(function(){
+				$('div').finish();  //停止动画，回归原位
+			});
+			
+		</script>
+	</body>
+</html>

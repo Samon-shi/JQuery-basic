@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				height: 30px;
+				border: 10px solid red;
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>dsad</p>
+		<script>
+			alert($('p').height());  //获取高度
+			
+			
+			
+			//outerHeight 方法如果参数不写为默认值false 	不把margin值计算进去  如果参数为true 会把border margin padding 都计算进去 
+			alert('我是outerHeight获得的高度：'+$('p').outerHeight());
+			
+//			innerHeight  方法获得高度不把border 和margin 计算进去  但是会把padding值计算进去 
+			alert('我是innerHeight获得的高度：'+$('p').innerHeight());
+			
+		</script>
+	</body>
+</html>

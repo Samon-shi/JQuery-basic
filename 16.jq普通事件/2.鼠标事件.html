@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>这是p标签</p>
+		<div>
+			<input type="text" name="" id="" value="123456" />
+			<span style="display: none;">已经获取焦点</span>
+			<p><input type="text" value="654321"></p>
+			<p><em><input type="text" value="sadsad"></em></p>
+		</div>
+		<script>
+			
+			//当鼠标左键按下，然后再抬起鼠标左键，才算完成一次click事件
+//			$('p').click(function(){
+//				$(this).text();
+//			});
+//			
+//			
+//			//双击
+//			$('p').dblclick(function(){
+//				$(this).text();
+//			});
+//			
+//			
+//			//当获取焦点的时候显示span标签 
+//			$('div').focusin(function(){
+//				$(this).children('span').show();
+//			});
+//			
+//			$('input').focusin(function(){
+//				
+//				$('span').show();
+//			});
+//			
+//			
+//			//鼠标点下去
+//			$('p').mousedown(function(){
+//				$(this).text();
+//			});
+//			
+//			
+//			//鼠标回弹
+//				$('p').mouseup(function(){
+//				$(this).text();
+//			});
+			
+			//在整个文档鼠标滑动
+//			$(document).mousemove(function(e){
+//				var X =e.pageX;
+//				var  Y=e.pageY;
+//				$('input').val(X+','+Y);
+//				
+//				
+//			});
+			
+			
+			//鼠标经过某一个DOM元素 
+			$('p').mouseover(function(){
+				
+				$(this).css('background','red');
+			});
+			
+			//鼠标移入加背景       移除减背景
+//			$('p').mouseout(function(){
+//				
+//				$(this).css('background','red');
+//			});
+			
+			
+			//鼠标经过文档的时候  p标签  背景变成none 
+			$(document).mouseover(function(){
+				$('p').css('background','none');
+			});
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

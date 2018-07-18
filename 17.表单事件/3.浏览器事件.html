@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body style="height: 3000px;">
+		
+		<script>
+//			$(window).resize(function(){
+//				alert('浏览窗口change');
+//			});
+			
+			$(window).scroll(function(){
+				
+//				alert('滚动条位置发生偏移');
+				$('body').append('<div>滚动条位置发生偏移</div>');
+//				$('body').appendTo('<div>滚动条位置发生偏移</div>');
+			});
+
+		</script>
+	</body>
+</html>

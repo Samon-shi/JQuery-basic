@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="11111" />
+		<!--<input type="file" name="" id="" value="" />-->
+		<input type="password" name="" id="" value="asdsadas" />
+		<textarea name="" rows="" cols="30" rows="10">123321</textarea>
+		<span style="display: none;">
+			sadsad
+		</span>
+		<script>
+			//获得焦点
+//			$('input').focus(function(){
+//				$('span').show();
+//			});
+//			
+			
+		    //blur  元素失去焦点的时候
+			$('input').blur(function(){
+				$('span').show();
+			});
+			
+			//表单值改变  当有focus事件元素里面的值改变的时候  并且触发了 alert事件才算完成一次change事件 
+//			$('input[type=file]').change(function(){
+//				$('span').show();
+//			});
+			
+			
+			//里面的值选中以后触发的时间
+//			$('input[type=password]').select(function(){
+//				$('span').show();
+//			});
+			
+			
+			
+			$('textarea').select(function(){
+				$('span').show();	
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

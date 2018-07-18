@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内容过滤选择器</title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{height: 30px;line-height: 30px;}
+		</style>
+	</head>
+	<body>
+		<p>sdcsdfdsddsdd的<strong>LiveScript</strong></p>
+		<p>dadsadsadsaasdsa</p>
+		<p><a href=""></a></p>
+		<p>dgfsdafsdafsdafsa</p>
+		<p>sadsadsasd</p>
+		
+		<script>
+//			内容中包含LiveScript 的标签背景变红色
+//			$('p:contains(LiveScript)').css('background','red');
+
+			// 内容包含LiveScript 的显示  其他的 标签全部隐藏  
+			//$('p:contains(LiveScript)').show().siblings().hide();
+
+		 	// p 标签中含有strong 标签的  背景色为红色
+			//	$('p:has("strong")').css('background','red');
+	
+			//p中的空标签为红色     p标签内部没有文本并且没有子元素 
+			//	$('p:empty').css('background','red');
+		
+			
+			//   parent 含有子元素并且有文本  
+			$('p:parent').css('background','red');
+		
+	
+		
+		
+		
+	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			div{color: red;}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="username" id="username" value="" />
+		<input type="button" name="" id="" value="检验" />
+		<div></div>
+		<script>
+//			   访问地址  http://127.0.0.1/jqsz/Ajax/loadPHP.html
+			$('input[type=button]').click(function(){
+				
+				//发送的参数必须是json格式 
+				var send ={'username':$('#username').val()}
+			
+				//data  服务器返回的数据  textStatus 文本情况      XMLHttpRequest 
+				$('div').load('testLoad.php',send,function(data){
+					console.log(data);
+				}); 
+			});
+			
+		</script>
+	</body>
+</html>

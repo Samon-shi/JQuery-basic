@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<textarea name="" id="" rows="10" cols="30"></textarea>
+		<span>你还可以再输入<strong style="color: red;">140</strong>个字</span>
+		<script>
+			$('textarea').keyup(function(){
+				
+				var maxLength =140;
+//				alert($(this).val().length);  //输入字符的长度
+				var l =$(this).val().length;
+				$('strong').text(maxLength - l);  //改变你还可以输入的字数
+				
+				//parseInt()获取的是整数值    超过140个字截取
+				if(parseInt($('strong').text())<0){
+					$('strong').text('0');
+					 var val =$(this).val().substring(0,140);  //截取掉的文本
+					 $(this).val(val);  //放入textarea  val
+				}
+			});
+			
+		</script>
+	</body>
+</html>

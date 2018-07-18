@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				width: 300px;
+				padding: 10px;
+				border:  1px solid #ABCDEF;
+				/*display: none;*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		<a href="###">点击</a>
+		<p>sadsfdsafsdafsda</p>
+		<script>
+//			$('a').click(function(){
+//				//透明度opacity 从0变成1 
+//				$('p').fadeIn(1000);    //渐渐出现
+//			});
+
+
+//				$('a').click(function(){
+//				//透明度opacity 从0变成1 
+//				$('p').fadeOut(1000);    //渐渐消失
+//			});
+
+
+
+//		$('a').click(function(){
+//			  //透明度变成0.5
+//				$('p').fadeTo(1000,0.3,function(){   //回调函数 
+//					alert('fadeTo方法执行完成');
+//				});    
+//			});
+			
+			$('a').click(function(){
+				$('p').fadeToggle(500)
+			});
+			
+			
+		
+			
+			
+		</script>
+	</body>
+</html>

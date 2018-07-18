@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="text" />
+		<script>
+			//键盘按下
+			$('input').keydown(function(){
+				alert($(this).val());
+			});
+			
+				$('input').keyup(function(){
+				alert($(this).val());
+			});
+			
+				$('input').keypress(function(){
+				alert($(this).val());
+			});
+			
+		</script>
+	</body>
+</html>

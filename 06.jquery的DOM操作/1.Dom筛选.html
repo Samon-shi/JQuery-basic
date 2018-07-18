@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dom筛选</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p class="first">1</p>
+		<p id="second">2</p>
+		<p>3</p>
+		<p>4</p>
+	<script>
+//		$('p').eq(0).css('background','red');
+//		$('p:eq(0)').css('background','red');
+
+//		$('p').filter(':even').css('background','red');  //下标偶数p  红色背景
+//		$('p').filter(':odd').css('background','red');  //下标奇数p  红色背景
+//		$('p').filter(':last').css('background','red');  //下标最后一个  红色背景
+
+//		$('p').filter('#second').css('background','red');  //id为second 的p  红色背景
+//		$('p').filter('.first').css('background','red');  //class为 first的 p   红色背景
+		
+//		$('p').last().css('background','red');
+
+
+
+//		$('p').click(function(){
+//			if($(this).is('.first')){
+//				$(this).css('background','red');
+//			}
+//		});
+
+
+//		$('p').not(':first').css('background','red');  // p  标签不是first的  
+
+		$('p').slice(1,5).css('background','red');  //slice  第一个开始  第5个结束  不包括第5个  [1,5)   指定下标   
+
+
+	</script>
+	</body>
+</html>

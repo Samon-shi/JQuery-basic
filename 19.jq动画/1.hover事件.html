@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>标签</p>
+		<script>
+			//hover事件是模拟鼠标进入 mouseover    和鼠标离开  mouseleave 
+			 
+			 //效果  鼠标进入变成红色  鼠标离开颜色消失 
+//			hover(fn1,fn2);   传两个匿名函数
+			
+			$('p').hover(function(){
+				$(this).css('background','red');
+			},function(){
+				$(this).css('background','none');
+			});
+			
+		</script>
+	</body>
+</html>

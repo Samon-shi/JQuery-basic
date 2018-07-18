@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>我是p标签</p>
+		<script>
+			
+			//第一个开发人员，给p标签添加click事件，使他的背景颜色变成红色
+//			$('p').click(function(){
+//				$(this).css('background','red');
+//				
+//			});
+//			
+			// 第二个开发人员，给p标签添加click事件，是他的文本颜色变成白色
+//			$('p').click(function(){
+//				
+//				$(this).css('color','white');
+//				
+//			});
+//			
+			// 第三 个开发人员，不想让p标签在点击的时候添加红色的背景，只想让p标签里面的文本颜色变成蓝色，那么他用unbind方法吧p标签上的click事件给移除了 
+			
+			  
+			//命名空间   几个前端一起开发 所以 得配备有命名空间
+			$('p').bind('click.background',function(){
+				$(this).css('background','red');
+			});
+			
+			
+			$('p').bind('click.color',function(){
+				$(this).css('color','blue');
+				
+			});
+			
+			$('p').unbind('click.color');
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

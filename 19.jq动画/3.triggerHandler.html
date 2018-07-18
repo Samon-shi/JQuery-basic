@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				background: #f00;
+				padding: 20px;
+			}
+			
+			a{
+				background: #f90;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			<a href="###">点击</a>
+			
+		</p>
+		
+		<script>
+			$('a').click(function(){
+				alert('a.click');
+			});
+			
+			$('p').click(function(){
+				
+				alert('p.click');
+			});
+		
+//			$('a').trigger('click');  //会冒泡   a.click   p.click
+			$('a').triggerHandler('click');
+		
+		</script>
+	</body>
+</html>

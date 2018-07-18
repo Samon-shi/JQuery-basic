@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<form id="form">
+			
+		
+		用户名：<input type="text" id="username"  name="username" value=""/><br />
+		邮箱地址：<input type="text" id="email"    name="email" value=""/><br />
+		URL地址：<input type="text" id="url"   name="url" value=""/><br />
+		qq：<input type="text" id="qq"   name="qq" value=""/><br />
+		Skype：<input type="text" id="Skype"   name="Skype" value=""/><br />
+		<input type="button" name="" id="buttom" value="提交" />
+	</form>
+		<script>
+			$('input[type=button]').click(function(){
+				var data =$("#form").serialize();  //serialize() 方法通过序列化表单值 ，创建 URL 编码文本字符串。
+//				alert(data);
+//				return false;
+				$.ajax({
+					type:"post",
+					url:"6.php"+Math.random(),
+					data:data,// 往服务器传送的daa
+					async:true,
+					success:function(res){
+					}
+				});
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>

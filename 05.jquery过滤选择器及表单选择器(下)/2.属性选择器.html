@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器</title>
+		<script src="../jquery-1.10.2.js"></script>
+		
+	</head>
+	<body>
+		<p title="js" myattr="my">sdfsdfsdfsdfsd<strong>LiveScript</strong></p>
+			<p>dsfds</p>
+			<div title="language" myattr="my">adsadsadsa</div>
+			
+			<a href="#" sendID="4">删除</a>
+			
+			<script type="text/javascript">
+//				div	title等于language 的   背景颜色为红色
+				$('div[title=language]').css('background','red');
+
+//			div	  myattr等于my 的   背景颜色为绿色
+			$('div[myattr=my]').css('background','green')
+
+			//复合选择 
+			$('p[title][myattr=my]').css('background','green');
+
+
+			</script>
+	</body>
+</html>

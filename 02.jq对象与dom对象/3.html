@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.8.3.js"></script>
+		
+	</head>
+	<body>
+		<input type="text" name="" id="a" value="1111" />
+		<script type="text/javascript">
+			var input =$('#a');
+			//弹出input的value值 
+			alert(input.val());
+			
+			
+			//如果非要使用js 中的value 
+			//jq对象转换成DOM对象的  1.使用索引 ,index   2. 可以使用get(index)
+			
+			alert(input[0].value);
+			alert(input.get(0).value()));
+		</script>
+	</body>
+</html>

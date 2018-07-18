@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>延迟动画</title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				width: 300px;
+				height: 300px;
+				background: #ABCDEF;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="点击" />
+		<p>asdas</p>
+		<script>
+			$('input').click(function(){
+				//delay(1000)延迟一秒
+				$('p').slideUp(500).delay(1000).fadeIn(500);
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jq与其他插件共存</title>
+		<script src="../jquery-1.8.3.js"></script>
+		<script src=""></script>	
+	</head>
+	
+	<body>
+		<input type="text" name="" id="a" value="aaaaa" />
+		
+		<script>
+			//jq与其他插件共存  使用  jQuery.noConflict()
+		var showhat =jQuery.noConflict();
+			alert('这是protype弹出的内容'+$F('a'));
+			alert('这是jq弹出的内容'+showhat('#a').val());
+		</script>
+	</body>
+</html>

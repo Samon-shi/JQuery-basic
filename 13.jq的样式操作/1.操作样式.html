@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			.bgred{
+				background: red;
+			}
+			.white{
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是p标签</p>
+		<script>
+//			$('p').addClass('bgred white');   //增加两个class
+//			$('p').removeClass('white bgred');  //删除两个 class
+//			
+//				$('p').click(function(){
+//					$(this).toggleClass('bgred white');		  // 切换样式 
+//				});
+			
+			
+			
+			
+			// $(this).hasClass('bgred')  返回布尔值   true  、false   判断是否有样式
+			$('p').click(function(){
+				if($(this).hasClass('bgred')){
+					$(this).removeClass('bgred');
+				}else{
+					$(this).addClass('bgred');
+				}
+			});
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

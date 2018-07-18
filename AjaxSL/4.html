@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>提示信息</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" value="获取新闻列表" />
+		<div id="info">
+			<!--提示图片-->
+			<img src="loading.gif" alt="" id="loading" style="display: none;"/>
+			<ul>
+				
+			</ul>
+		</div>
+		
+		
+		<script>
+			$('input').click(function(){
+				var ul =$('#info>ul')
+				
+				$.ajax({
+					type:"get",
+					url:"3.php?"+Math.random(),
+					async:true,
+					success:function(data){
+//						alert(data);
+				var res = eval(data);
+					for(var i=0;i<res.length;i++){
+//						alert(res[i].title);
+						ul.append('<li>'+res[i].title+'&nbsp<em>'+res[i].publicTime+'</em></li>');
+					}
+					}
+				});
+				
+			});
+				
+//			提示信息
+			$(document).ajaxStart(function(){
+				
+				$('#loading').show();
+			});
+			
+			$(document).ajaxStop(function(){
+				$('#loading').hide();
+			});
+			
+		
+		</script>
+	</body>
+</html>
+	

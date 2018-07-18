@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			button{
+				position: fixed;
+				top: 	50px;
+			}
+		</style>
+	</head>
+	<body style="height: 8000px;">
+		<button>弹出滚动条离顶部的距离</button>
+		<script>
+			$('button').click(function(){
+				alert($(window).scrollTop());  //纵向滚动条的距离
+			});
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: #ABCDEF;
+				position: absolute;
+				left: 0;
+				top: 30px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="点击" />
+		<div></div>
+		
+		<script>
+			$('input').click(function(){
+				$('div').animate({
+					'left':'800px',
+					'top':'500px',
+					'opacity':'0.2'
+				},3000,function(){
+					$('div').css('background','red');
+				});
+			});
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>adsas<strong style="background: red;">sadsads</strong></p>
+		<script>
+//			alert($('p').text());  //获得 p的文本
+			
+//			text()方法如果没有参数,会获得匹配元素的文本节点,如果有参数,会修改匹配元素的文本节点
+//			$('p').text('sdasd'); 
+
+
+//				如果匹配标签内有子元素   html()才能获得匹配元素里面的真实内容
+			$('p').html(); //匹配元素得dom节点 
+			
+			$('p').html('asdsadsadsa<span style="background:#f90">sadsadas</span>asdsadsads');
+			
+		</script>
+	</body>
+</html>

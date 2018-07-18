@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>转义字符</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<form action="" method="post">
+			
+			<input type="checkbox"  name="gender[]" value="男"/>
+			<input type="checkbox"   name="gender[]"  value="女"/>
+			<input type="checkbox" name="gender[]"  value="保密"/>
+			<input type="submit" name="" id="" value="提交"  />
+			<input type="reset" name="" id="" value="重置" />
+		</form>
+	</body>
+</html>
+<script>
+//	$('input[name=gender\\[\\]]').click(function(){
+//		alert($(this).val());
+//	});
+	
+	$('input[type=\'checkbox\']').click(function(){
+		alert($(this).val());
+	});
+	
+</script>

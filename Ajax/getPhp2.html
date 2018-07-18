@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			.load{width: 500px;height: 300px;border: 1px solid #abcdef;}
+			div{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="username" id="username"  />
+		<input type="button" name="" id="" value="检验" />
+		<div></div>
+<script>
+	
+	$('input[type=button]').click(function(){
+		
+			
+		var  url ='testGet.php';
+		
+		var sendData ={'username':$('#username').val()};
+				
+			$.ajax({
+				type:"get",
+				url:url,
+				data:sendData,
+				success:function(data){
+					if(data =='true'){
+							$('div').html('用户名可以使用');		
+					}else{
+							$('div').html('用户名不可以是admin');
+					}	
+				}
+				});
+					
+		
+	});
+</script>
+	</body>
+</html>

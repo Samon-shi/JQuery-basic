@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;padding: 0;
+			}
+			
+			ul{
+				list-style-type: none;
+			}
+			
+			body{
+				margin: 50px;
+			}
+			
+			div{
+				width: 200px;
+				height: 24px;
+				line-height: 24px;
+				text-align: center;
+				border: 1px solid #ccc;
+			}
+			
+			ul{
+				width: 200px;
+				border: 1px solid #CCCCCC;
+				display: none;
+			}
+			
+			
+			ul li{
+				height: 24px;
+				line-height: 24px;
+			}
+			
+			
+			ul li:hover{
+				background: #cfcfcf;
+			}
+			
+			
+		</style>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div>请选择城市</div>
+		<ul>
+			<li>北京</li>
+			<li>天津</li>
+			<li>上海</li>
+			<li>重庆</li>
+		</ul>
+		<script>
+			$('div').click(function(e){
+				$('ul').show();
+				e.stopPropagation(); //阻止冒泡
+			});
+			
+			$(document).click(function(){
+				$('ul').hide(); 
+			})
+			
+			
+		</script>
+	</body>
+</html>

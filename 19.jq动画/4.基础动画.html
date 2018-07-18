@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				width: 300px;
+				padding: 10px;
+				border:  1px solid #ABCDEF;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="###">点击</a>
+		<p>sadsfdsafsdafsda</p>
+		<script>
+//			$('a').click(function(){
+////				$('p').hide(600);  // 600 代表毫秒数 
+//			
+//				$('p').hide('fast');  // fast  small normal  
+//			});
+
+//		$('a').click(function(){
+//			$('p').show(500);
+//		});
+
+
+//		$('a').click(function(){
+//			$('p').toggle();  //会自动切换show()和hide()事件
+//		});
+//					
+     
+         //模拟toggle效果 
+		$('a').click(function(){
+			//如果p是可见元素
+			if($('p').is(':visible')){
+				$('p').hide(500);
+			}else{
+				$('p').show(500);
+			}
+			
+		});
+					
+					
+					
+					
+		</script>
+	</body>
+</html>
+
+
+
+
+

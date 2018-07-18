@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="获取新闻列表" />
+		<div id="info">
+			<ul>
+				<li></li>
+			</ul>
+			
+		</div>
+		<script>
+			$('input').click(function(){
+				var ul =$('#info>ul')
+				
+				$.ajax({
+					
+					url:"7.php"+Math.random(),
+					dataType:'xml',
+					async:true,
+					success:function(res){
+//						alert(res);
+						$(res).find('title').each(function(){
+							//操作xml文件的时候.html()方法不可用
+//							alert($(this).text());
+							ul.append('<li>'+$(this).text()+'</li>');
+
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

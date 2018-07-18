@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>基本过滤选择器</title>
+	<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p><span>我是</span>第<em>111</em>标签</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<p>6</p>
+		
+		<script>	
+//			 p :first p元素下面的子元素第一个标签   我是  因该是红色
+		//console.log($('p :first'));
+			$('p :first').css('color','red'); 
+			$('p :last').css('background','red'); 
+			
+//			$('p:not(\'.a\')').css('background','red');
+			
+//			$('p:odd').css('background','red');
+
+			
+
+			
+		</script>
+	</body>
+</html>

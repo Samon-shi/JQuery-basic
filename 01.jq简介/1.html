@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<body>
+	<a href="#">asadsadsadsadsa</a>
+
+
+		<script src="../jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+//		需求：①当页面加载完毕的时候，要让a标签的文字变成红色
+//		②	当我点击a标签的同时	 我需要让这个a标签有一个黄色的边框  
+
+
+//		alert(1);
+//			js写法
+//		var a =document.getElementsByTagName('a')[0];
+//		a.style.color ="red";
+//		a.onclick=function(){
+//			this.style.border= "10px solid #f90"
+//		};
+		
+		var a =$('a');
+		a.css('color','red').click(function(){
+			$(this).css('border','10px solid #38a38a');
+		});
+		
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="我是不能修改的文本框" disabled="disabled" />
+		<input type="text" name="" id="" value="可修改文本框" />
+		
+		<input type="checkbox" name="" id="" value="aaa" checked="checked" />
+		<input type="checkbox" name="" id="" value="bbb"  />
+		
+		<select name="">
+			<option value="1">1</option>
+			<option value="2" selected="selected">2</option>
+			<option value="3">3</option>
+		</select>
+		
+		<script type="text/javascript">
+			
+//			alert($('input:disabled').val()); //我是不能修改的文本框
+//			alert($('input:enabled').val());//可修改文本框
+			
+//			alert($('input[disabled=disabled]').val());//我是不能修改的文本框
+
+//				alert($(':checked').val());aaa
+//		alert($('input[checked=checked]').val());		aaa
+			
+			
+//			alert($(':selected').val()); //2
+		alert($('select option[selected=selected]').val());  //2
+		
+		
+
+		</script>
+	</body>
+</html>

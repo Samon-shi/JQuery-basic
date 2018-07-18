@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<script src="3.js"></script>
+		
+		<style type="text/css">
+			table{width: 100%;border: 1px solid #ABCDEF;border-collapse: collapse;}
+			th,td{height: 28px;border: 1px solid #ABCDEF;text-align: center;}
+			.evenRow1{background: #0000FF;}
+			.oddRow1{background: #FF9900}
+			.currentRow1{background: yellow;}
+		</style>
+		<script>
+			$(function(){
+				$('#table1').table({
+					evenRownClass:'evenRow1',
+					oddRownClass:'oddRow1',
+					currentRowClass:'currentRow1',
+					eventType:'click'  //点击事件
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<!--需求：-->
+		<!--开发一个插件，奇数行颜色#38a38a,偶数行颜色#09f,当鼠标移动到当前行的时，当前行的颜色变成yellow 当鼠标移开的时候还是现实原来的颜色-->
+		
+		<table border="" cellspacing="" cellpadding="" id="table1">
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>身高</th>
+				<th>体重</th>
+			</tr>
+			
+			<tr>
+				<td>张三</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+				
+			</tr>
+			
+			
+			<tr>
+				<td>李四</td>
+				<td>20</td>
+				<td>187</td>
+				<td>70KG</td>
+				
+			</tr>
+			
+			
+			<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+			
+					<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+			
+					<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+			
+					<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+			
+					<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+			
+					<tr>
+				<td>小四</td>
+				<td>22</td>
+				<td>187</td>
+				<td>70KG</td>
+			</tr>
+			
+		</table>
+	</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			*{margin: 0;}
+			
+			div{
+				position: relative;
+				left: 20px;
+				top: 20px;
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+			
+			p{
+				/*margin: 50px;*/
+				position: absolute;
+				left: 100px;
+				top: 50px;
+				width: 50px;
+				height: 50px;
+				background: yellow;
+				
+				}
+		</style>
+	</head>
+	<body>
+		<div>divdivdiv
+		<p>adadsa</p>
+		</div>
+		
+		<script>
+//			var a =$('p').offset();
+//			alert(a.left);
+//			alert(a.top);    
+
+         var a =$('p').position();
+         var b =$('p').offset();
+         alert('position方法获得的值'+a.left);
+         alert('offset方法获得的值'+b.left);
+			
+		</script>	
+	</body>
+</html>

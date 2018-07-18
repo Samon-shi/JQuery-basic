@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			.load{
+				width: 500px;
+				height: 300px;
+				border: 1px solid #ABCDEF;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="加载" />
+		<div class="load"></div>
+		<script>
+			$('input[type=button]').click(function(){
+		
+//				$('.load').load('test.html?date='+Math.random());  //吧html内容加载过来 
+				
+				$('.load').load('test.html?date='+Math.random()+' #test2');  //只加载#test2的内容
+					
+			});
+			
+		</script>
+	</body>
+</html>

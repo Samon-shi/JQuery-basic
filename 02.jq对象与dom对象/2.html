@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.8.3.js"></script>
+	</head>
+	<body>
+		<p id="p">dasdsads</p>
+		<script>
+			var p =$('p');  //用jq选择器得到的对象  就是jquery对象 
+//			alert(p.innerHTML);  //undefined
+			 //jquery对象不能使用DOM对象中的方法   只能使用jquery中的方法 
+			 alert(p.html());
+			 alert(p.length);
+			 alert(p.toString());
+			 //如果DOM对象中的方法在Jquery裤被改写，那么可以使DOM中的方法 
+			 
+			
+			
+			
+		</script>
+	</body>
+	
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组和对象</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" value="获取新闻列表" />
+		<div id="info">
+			<ul>
+				
+			</ul>
+		</div>
+		
+		
+		<script>
+			$('input').click(function(){
+				var ul =$('#info>ul')
+				
+				$.ajax({
+					type:"get",
+					url:"3.php?"+Math.random(),
+					async:true,
+					success:function(data){
+//						alert(data);
+				var res = eval(data);
+					for(var i=0;i<res.length;i++){
+//						alert(res[i].title);
+						ul.append('<li>'+res[i].title+'&nbsp<em>'+res[i].publicTime+'</em></li>');
+					}
+					}
+				});
+				
+			});
+				
+		
+		</script>
+	</body>
+</html>

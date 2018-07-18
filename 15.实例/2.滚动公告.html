@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+			body{
+				margin: 50px;
+			}
+			ul{
+				list-style: none;
+			}
+			
+			li{
+				height: 30px;line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<script>
+//			查找第一条li 
+//			$('ul :first').css('background','red');
+//			$('ul').children().first().css('background','red');
+
+			setInterval(function(){
+					//在尾部克隆第一个li 
+	   var newLi =	$('ul>:first').clone(true);
+		
+		$('ul').append(newLi);
+		
+		//吧第一个删掉
+		$('ul>:first').remove();
+		
+			},1000);
+	
+		</script>
+	</body>
+</html>

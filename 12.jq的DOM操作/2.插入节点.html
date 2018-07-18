@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p>我是P标签</p>
+		<script>
+			
+			var strong =$('<strong>我是被插入的新标签</strong>');
+			//向匹配元素的尾部插入
+			
+//			$('p').append(strong);  //$('p')  这个匹配元素在前
+//			strong.appendTo($('p'));//appenTo  前面是 要插入的内容，  后面是匹配元素 
+			
+			
+				//向匹配元素的头部插入
+//			$('p').prepend(strong); 
+//			strong.prependTo($('p'));
+			
+			
+		//在匹配元素之后插入Dom，匹配元素在前
+//			$('p').after(strong);
+			
+			//在匹配元素之后插入Dom，匹配元素在后
+//			strong.insertAfter($('p'));
+			
+			
+			//在匹配元素之前插入Dom 匹配元素在前
+			$('p').before(strong);
+			//在匹配元素之前插入Dom 匹配元素在后
+			strong.insertBefore($('p'));
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

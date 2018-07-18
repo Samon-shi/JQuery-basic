@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax出错处理</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="获取数据" />
+		<div></div>
+		<span style="color: red">
+			
+		</span>
+		<script>
+			$('input').click(function(){
+				$.ajax({
+					timeout:1000,// 1000毫秒   超时时间
+					type:"get",
+					url:"8.php"+Math.random(),
+					async:true,
+					success:function(res){
+						$('div').html(res);
+					},
+					
+					error:function(jqXHR,textStatus,errorThrown){
+//						alert('textStatus=>'+textStatus);
+//						alert('errorThrown=>'+errorThrown);
+						if(errorThrown == 'Not Found'){
+							$('span').html('你请求的地址不存在');
+						}
+						
+						if(textStatus =='timeout'){
+							$('span').html('请求超时，请刷新页面重新操作');
+						}
+						
+					}
+				});
+				
+				//ajax只要发送错误就报错  
+				$(document).ajaxError(function(){
+					$('span').html('ajax请求发生错误');
+				})
+			})
+		</script>
+	</body>
+</html>

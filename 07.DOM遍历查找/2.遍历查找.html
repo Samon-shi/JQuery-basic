@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom遍历查找</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div id="outer" style="position: relative;">
+			outer
+			<div id="wrap" style="position: absolute;left: 10px;top: 20px;">
+				wrap
+			<div>111</div>
+			<div>222</div>
+			<p id="p1"><span>第一个p</span>1</p>
+				<p id="p2">2</p>
+				<p>3</p>
+				<p>4</p>
+				<div>div</div>
+			</div>
+		</div>
+		<script>
+//			$('#wrap>p').css('background','red');    //层级选择器 
+//			$('#wrap').children().css('background','red'); //子集 children 在id =wrap 里面的
+//			$('#wrap').children().not('div').css('background','red'); //子集 children 在id =wrap 里面的  而且不是div标签的
+					
+//		$('#p1').parent().css('background','red');		    		
+
+//		$('#p1').parents().css('background','red');  //整个documnet编成红色 
+		
+//		$('#p1').parents('#outer').css('background','red'); 
+
+//		$('#p1').offsetParent().css('background','red');  
+		
+//		$('#p1').nextAll().not('div').css('background','green');  //查找同辈元素 
+		
+		
+//		$('#p2').prev().css('background','red');  //前一个兄弟元素 
+//		$('#p2').prevAll('div').css('background','red');  //前面所有的div兄弟元素 
+		
+//		$('#p2').siblings().css('background','red');  //除了 p2  所有的兄弟元素  都变红 
+		
+			
+//		$('span').parent().css('background','red');  //span第一个父元素
+		
+//		$('span').css('background','blue');  // span标签为蓝色 
+		
+//		合并一下
+//		$('span').parent().css('background','red').end().css('background','blue');
+
+
+			$('#p1').nextAll().addBack().css('background','red');
+
+		 
+		
+		
+				
+		</script>
+	</body>
+</html>

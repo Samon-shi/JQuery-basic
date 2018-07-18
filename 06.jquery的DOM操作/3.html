@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom遍历查找</title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div id="outer">
+			outer
+			<div id="wrap">
+				wrap
+				<p id="p1">1</p>
+				<p>2</p>
+				<p>3</p>
+				<p>4</p>
+				<div>div</div>
+			</div>
+		</div>
+		<script>
+//			$('#wrap>p').css('background','red');    //层级选择器 
+//			$('#wrap').children().css('background','red'); //子集 children 在id =wrap 里面的
+//			$('#wrap').children().not('div').css('background','red'); //子集 children 在id =wrap 里面的  而且不是div标签的
+					
+//		$('#p1').parent().css('background','red');		    		
+
+//		$('#p1').parents().css('background','red');  //整个documnet编成红色 
+		
+		$('#p1').parents('#outer').css('background','red');
+						
+				
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<script src="1.js"></script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="点击" />
+		<script>
+			var  a ='我是通过调用插件弹出的警告框';
+			
+//			$.myAlert();
+		$('input').click(function(){
+//			$.myAlert(a);
+//			$.myAlert2();
+			
+			//调用命名空间
+			$.zxit.myAlert(a);
+
+
+		});
+		</script>
+	</body>
+</html>

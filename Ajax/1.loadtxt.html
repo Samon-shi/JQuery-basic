@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			.load{
+				width: 500px;
+				height: 300px;
+				border: 1px solid #ABCDEF;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="加载" />
+		<div class="load"></div>
+		<script>
+			$('input[type=button]').click(function(){
+				// url  地址   data 往服务器发送的数据  callback 回调函数
+//				$('.load').load(url,data,callback);
+//					$('.load').load('test.txt');  //吧test.txt文件的内容加载过来
+					$('.load').load('test.txt?data='+Math.random());  //吧test.txt文件的内容加载过来  减少浏览器缓存保证每次的发送地址不一样
+					
+					
+			});
+			
+						
+			
+		</script>
+	</body>
+</html>

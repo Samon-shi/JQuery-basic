@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body style="height: 3000px;width: 3000px;">
+		<input type="text" name="" id="" value=""  style="position: fixed;top: 10px; left: 10px;"/>
+		<script>
+			$(document).click(function(e){
+				var  x =e.pageX;   //获取鼠标相当于文档的X轴坐标
+				var y =e.pageY;  //获取鼠标相当于文档的y轴坐标
+				$('input').val(x+','+y);
+			})
+		</script>
+	</body>
+</html>

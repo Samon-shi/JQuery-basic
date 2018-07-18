@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<a href="#">点击</a>
+		<script>
+			
+				$('a').click(function(){
+				alert(11);
+			});
+			
+			var  newA=$('a').clone(true);  //克隆节点+事件 
+			$('body').append(newA);
+			
+			
+		
+			
+		</script>
+	</body>
+</html>

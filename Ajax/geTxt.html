@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			.load{width: 500px;height: 300px;border: 1px solid #abcdef;}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="加载" />
+		<div class="load"></div>
+<script>
+	
+	$('input[type=button]').click(function(){
+		
+//		url,[data],[callback],[type]String,Map,Function,StringV1.0
+//url:待载入页面的URL地址
+//
+//data:待发送 Key/value 参数。
+//
+//callback:载入成功时回调函数。
+//
+//type:返回内容格式，xml, html, script, json, text, _default。
+	//		$.get(url,sendData,callback,dataType);
+	
+		$.get('test.txt?data='+Math.random(),function(data){
+//					alert(data);// 加载test.txt文件内容 
+					$('.load').html(data);  //往div里面放内容 
+					
+		});
+	})
+</script>
+	</body>
+</html>

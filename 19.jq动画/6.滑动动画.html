@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			p{
+				width: 300px;
+				padding: 10px;
+				border:  1px solid #ABCDEF;
+				/*display: none;*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		<a href="###">点击</a>
+		<p>sadsfdsafsdafsda</p>
+		
+		<script>
+		$('a').click(function(){
+			
+//			$('p').slideDown(500);  //向下滑动 
+//			$('p').slideUp(500);  //向上收齐
+			$('p').slideToggle(500);  //切换UP和down 
+		});
+		
+		
+		
+
+		</script>
+	</body> 
+</html>

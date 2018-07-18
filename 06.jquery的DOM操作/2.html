@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="text" name="" id="" value="11" />
+			<input type="text" name="" id="" value="22" />
+			<input type="text" name="" id="" value="33" />
+		
+		</form>
+		<p></p>
+		
+		
+		<script>
+		 var arr =	$('input').map(function(){
+//				alert($(this).val()); // 11  22  33
+				 return  $(this).val();
+			}).get().join(',');  // join  方法  返回的是字符串      得到的值用,号拼接成新字符串  
+			
+			alert(typeof arr);  //string 
+			
+			$('p').html(arr); //11,22,33
+		</script>
+	</body>
+</html>

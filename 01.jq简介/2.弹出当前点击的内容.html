@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>1个标签</p>
+		<p>2个标签</p>
+		<p>3个标签</p>
+		<p>4个标签</p>
+		
+	</body>
+</html>
+		<script src="jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+//		当我点击每个p标签的时候,弹出当前p标签里的内容
+
+//js  写法
+//		var p =document.getElementsByTagName('p');
+//		
+//		for(var i =0;i<p.length;i++){
+//			p[i].onclick =function(){
+//				alert($(this).html());
+//			}
+//		}
+		
+		//jq写法
+	var  p =$('p');
+	p.click(function(){
+		alert($(this).html());
+	});
+
+		
+		
+		
+		
+	</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子元素过滤选择器</title>
+		<script src="../jquery-1.10.2.js"></script>
+		
+	</head>
+	<body>
+		<div>
+		<p>1个子元素</p>
+		<p>2个子元素</p>
+		<p>3个子元素</p>
+		<p>4个子元素</p>
+		<p>5个子元素</p>
+		</div>
+		
+		<div id="">
+			<p>我只有一个子元素</p>
+		</div>
+		<script>
+			//        first-child  选择父元素第一个子元素
+//			$('div p:first-child').css('background','red');
+			$('div p:only-child').css('background','red');
+			
+		</script>
+	</body>
+</html>

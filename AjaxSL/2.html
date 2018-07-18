@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="获取信息" />	
+		<div id="info"></div>
+		<script>
+			$('input').click(function(){
+				$.ajax({
+					type:"get",
+					url:"2.php"+Math.random(),
+					async:true,
+					success:function(data){
+//						alert(data);  typeOf(data)  string 类型
+
+					var res =eval(data); //eval() 函数可计算某个字符串
+//					alert(typeof(res));  //object
+					$("#info").html(res[0].title);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
+	

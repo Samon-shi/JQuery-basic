@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<p id="a" class="a">111</p>
+		
+		<!--优选选择 id选择器--> 
+		<!--class 选择器 会在ie下吧所有的dom便利一边-->
+		
+		<p class="b"></p>
+		<div id="div1">
+			<div id="div2"></div>	
+		</div>	
+		<script>
+			//绝对不可以
+//			$('div#div1') 
+		</script>
+
+		<script>
+			$('p.a')   // 只搜索p下面的class .a 这样提高效率
+		
+		</script>
+		
+	</body>
+</html>

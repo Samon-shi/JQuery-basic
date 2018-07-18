@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+			body{
+				margin: 50px;
+			}
+			ul{
+				list-style-type: none;
+			}
+			
+			#ul{
+				height: 30px;
+				margin-bottom: 10px;
+				
+			}
+			
+			#ul li{
+				height: 30px;
+				line-height: 30px;
+				padding: 0 15px;
+				border: 1px solid  blue;
+				float:left;
+				margin-right: 3px;
+				cursor: pointer;
+			}
+			
+			#ul li.current{
+				background: #abcdef;
+			}
+			
+			#content div{
+					width: 300px;
+					height: 200px;
+					border: 1px solid  red;
+					display: none;
+			}
+			
+			#content div.show{
+				display: block;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<li class="current">php</li>
+			<li>ruby</li>
+			<li>python</li>
+		</ul>
+		<div id="content">
+			<div class="show">php----介绍</div>
+			<div>ruby----介绍</div>
+			<div>python----介绍</div>
+		</div>
+	</body>
+</html>
+<script>
+	$('#ul li').click(function(){
+		//1 点击li的时候切换样式
+//		$(this).addClass('current').siblings().removeClass('current');
+		
+		//2 根据li的索引值来确定哪个div显示其他的div隐藏 
+//		$('#content>div').eq($(this).index()).show().siblings().hide();
+		
+		
+		// 合并一哈       $(this)  是 li   siblings() 其他的li   parent()  是  ul   next() 是 div #content   children()是 content里面的div  
+		$(this).addClass('current').siblings().removeClass('current').parent().next().children().eq($(this).index()).show().siblings().hide();
+		
+	});
+	
+	
+	
+</script>
+
+

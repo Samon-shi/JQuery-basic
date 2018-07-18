@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../jquery-1.10.2.js"></script>
+		<style type="text/css">
+			table{
+				width: 700px;
+				border: 1px solid #ABCDEF;
+			}
+			tr{
+				height: 30px;
+			}
+			
+			th,td{
+			border: 1px solid #ABCDEF;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="">
+			<tr id="thead">
+				<th>姓名</th>
+				<th>性别</th>
+				<th>电话</th>
+			</tr>
+			
+			<tr>
+				<th>张三</th>
+				<th>男</th>
+				<th>132111515561</th>
+			</tr>
+			
+			
+			<tr>
+				<th>李四</th>
+				<th>男</th>
+				<th>15131351</th>
+			</tr>
+			
+			<tr>
+				<th>客服</th>
+				<th>女</th>
+				<th>15131351</th>
+			</tr>
+			
+			
+		</table>
+		
+		<input type="text" name="" id="" value="" />
+		<input type="button" name="" id="" value="search" />
+	
+		<script>
+			
+		  $('input[type=button]').click(function(){
+		  var text = $('input[type=text]').val(	);
+		  
+//		  alert(text);
+		  
+		  //点击搜索  内容中有女的行变红     并且不把#head 抬头行 去掉
+		   $('table tr:not("#thead")').hide().filter(':contains("'+text+'")').css('background','red').show();
+			
+			//或者    点击搜索  内容中有女的行变红     并且不把第一行  抬头行 去掉  
+//		   $('table tr:not(":first()")').hide().filter(':contains("女")').css('background','red').show();
+		  });
+		  
+		</script>
+	</body>
+</html>
